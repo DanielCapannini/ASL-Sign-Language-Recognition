@@ -10,7 +10,7 @@ import itertools
 
 
 
-model_save="./model10.hdf5"
+model_save="./model444.hdf5"
 classes = ['A', 'B', 'C', 'D', 'del', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
            'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'space', 'T', 'U', 'V',
            'W', 'X', 'Y', 'Z']
@@ -83,7 +83,7 @@ def proces(img):
             pred=model.predict(pre_processed_landmark_list)
         return True, image, pred
     else:
-        return False, img, img
+        return False, img, np.zeros(28)
     
 def show_frames():
         # Get the latest frame and convert into Image
